@@ -16,9 +16,6 @@ class HomePage extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              child: SvgPicture.asset("assets/images/filter_icon.svg"),
-            ),
             SizedBox(height: 70),
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55.0),
@@ -89,16 +86,57 @@ class HomePage extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(
-                      // remove
-                      color: Colors.black,
-                    ),
                     borderRadius: BorderRadius.all(Radius.circular(20))),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 55.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 30),
+                      TextField(
+                          cursorColor: Colors.black,
+                          decoration: InputDecoration(
+                              prefixIcon: Icon(
+                                Icons.search,
+                                size: 30,
+                                color: Colors.black,
+                              ),
+                              hintStyle: TextStyle(fontSize: 20),
+                              hintText: 'Search')),
+                      SizedBox(height: 30),
+                      Row(
+                        children: [
+                          CategoryButton(text: "Greek"),
+                          SizedBox(width: 15),
+                          CategoryButton(text: "French"),
+                          SizedBox(width: 15),
+                          CategoryButton(text: "Italian")
+                        ],
+                      )
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
         )
       ],
     );
+  }
+
+  // ignore: non_constant_identifier_names
+  Widget CategoryButton({String text}) {
+    return ButtonTheme(
+        height: 40,
+        child: RaisedButton(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(18.0),
+              side: BorderSide(color: Colors.white)),
+          onPressed: () {},
+          elevation: 5,
+          color: Colors.white,
+          textColor: Color(0xff96BE4B),
+          child: Text(text, style: TextStyle(fontSize: 17)),
+        ));
   }
 }
