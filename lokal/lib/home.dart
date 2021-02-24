@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -112,6 +111,46 @@ class HomePage extends StatelessWidget {
                           SizedBox(width: 15),
                           CategoryButton(text: "Italian")
                         ],
+                      ),
+                      SizedBox(height: 30),
+                      SizedBox(
+                          height: 10000,
+                          child: GridView.count(
+                            // padding: EdgeInsets.zero,
+                            crossAxisCount: 2,
+                            childAspectRatio: 0.75,
+                            crossAxisSpacing: 25,
+                            mainAxisSpacing: 10,
+                            children: [
+                              for (var i in count)
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Image.asset('assets/images/biz$i.png'),
+                                    SizedBox(height: 10),
+                                    RichText(
+                                      text: TextSpan(
+                                        text: bizList[i - 1],
+                                        style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      ),
+                                    ),
+                                    SizedBox(height: 5),
+                                    RichText(
+                                        text: TextSpan(
+                                      text: "Details ...",
+                                      style: TextStyle(
+                                          fontSize: 15, color: Colors.black),
+                                    )),
+                                  ],
+                                )
+                            ],
+                          )),
+                      SizedBox(height: 30),
+                      Column(
+                        children: [CategoryButton(text: "Load More...")],
                       )
                     ],
                   ),
@@ -123,6 +162,16 @@ class HomePage extends StatelessWidget {
       ],
     );
   }
+
+  final count = [1, 2, 3, 4, 5, 6];
+  final bizList = [
+    "Lazros Greek Grills",
+    "Piatto",
+    "Bobby's Hideaway",
+    "Orchard Diner",
+    " Grill House",
+    "Mo's Restaurant"
+  ];
 
   // ignore: non_constant_identifier_names
   Widget CategoryButton({String text}) {
