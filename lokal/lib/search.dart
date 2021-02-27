@@ -50,16 +50,22 @@ class SearchPage extends StatelessWidget {
             ),
             TextField(
               decoration: InputDecoration(
-                  fillColor: Color(0xffe8e8e8),
+                  fillColor: Color(0xfff2f2f2),
                   filled: true,
-                  contentPadding: new EdgeInsets.symmetric(vertical: 0),
+                  contentPadding: new EdgeInsets.symmetric(vertical: -5),
                   prefixIcon: Icon(
                     Icons.search,
-                    size: 18,
+                    size: 22, // borderRadius: BorderRadius.circular(15),
                   ),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: new BorderSide(color: Colors.amber)),
+                  enabledBorder: new OutlineInputBorder(
+                    borderRadius: new BorderRadius.circular(25.0),
+                    borderSide: BorderSide(color: Color(0xfff2f2f2)),
+                  ),
+                  focusedBorder: new OutlineInputBorder(
+                    borderRadius: new BorderRadius.circular(25.0),
+                    borderSide: BorderSide(color: Color(0xfff2f2f2)),
+                  ),
+                  labelStyle: new TextStyle(color: Colors.green),
                   hintText: 'Search'),
             ),
             SizedBox(
