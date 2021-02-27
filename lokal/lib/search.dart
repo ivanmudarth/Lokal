@@ -38,10 +38,10 @@ class SearchPage extends StatelessWidget {
               text: TextSpan(
                   text: 'Search Businesses:',
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 29,
                     fontFamily: "SF Pro Display",
                     color: Colors.black,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w900,
                     //color: Color(0xff96BE4B)),
                   )),
             ),
@@ -66,7 +66,7 @@ class SearchPage extends StatelessWidget {
               height: 25,
             ),
             SizedBox(
-                height: 500,
+                height: 190,
                 child: GridView.count(
                   // padding: EdgeInsets.zero,
                   crossAxisCount: 1,
@@ -81,6 +81,35 @@ class SearchPage extends StatelessWidget {
                       ]),
                   ],
                 )),
+            SizedBox(height: 30),
+            Column(
+              children: [
+                ButtonTheme(
+                  height: 40,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                        side: BorderSide(color: Color(0xffAFD755))),
+                    onPressed: () {},
+                    elevation: 5,
+                    color: Color(0xffAFD755),
+                    textColor: Colors.white,
+                    child: Text("Confirm", style: TextStyle(fontSize: 17)),
+                  ),
+                ),
+                SizedBox(height: 14),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Container(
+                    height: 1.0,
+                    width: 290.0,
+                    color: Color(0xffe0e0d1),
+                  ),
+                ),
+                SizedBox(height: 12),
+                CategoryButton(text: "Return")
+              ],
+            )
           ]),
         )
       ],

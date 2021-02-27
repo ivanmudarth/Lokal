@@ -13,8 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Lokal App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue, fontFamily: ""), // SF Pro Display
       //home: HomePage(), // uncomment to display page
       home: SearchPage(),
     );
