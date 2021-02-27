@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+  final categories = ["Greek", "French", "Italian"];
+  final bizList = [
+    "Lazros Greek Grills",
+    "Piatto",
+    "Bobby's Hideaway",
+    "Orchard Diner",
+    " Grill House",
+    "Mo's Restaurant"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,11 +115,16 @@ class HomePage extends StatelessWidget {
                       SizedBox(height: 30),
                       Row(
                         children: [
-                          CategoryButton(text: "Greek"),
-                          SizedBox(width: 15),
-                          CategoryButton(text: "French"),
-                          SizedBox(width: 15),
-                          CategoryButton(text: "Italian")
+                          for (int i = 0; i < categories.length; ++i)
+                            Row(
+                              children: [
+                                CategoryButton(text: categories.elementAt(i)),
+                                if (i != categories.length - 1)
+                                  SizedBox(
+                                    width: 15,
+                                  )
+                              ],
+                            )
                         ],
                       ),
                       SizedBox(height: 30),
@@ -122,7 +137,7 @@ class HomePage extends StatelessWidget {
                             crossAxisSpacing: 25,
                             mainAxisSpacing: 10,
                             children: [
-                              for (var i in count)
+                              for (int i = 1; i <= bizList.length; ++i)
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -162,16 +177,6 @@ class HomePage extends StatelessWidget {
       ],
     );
   }
-
-  final count = [1, 2, 3, 4, 5, 6];
-  final bizList = [
-    "Lazros Greek Grills",
-    "Piatto",
-    "Bobby's Hideaway",
-    "Orchard Diner",
-    " Grill House",
-    "Mo's Restaurant"
-  ];
 
   // ignore: non_constant_identifier_names
   Widget CategoryButton({String text}) {

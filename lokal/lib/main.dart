@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: HomePage(), // uncomment to display page
+      //home: HomePage(), // uncomment to display page
       home: SearchPage(),
     );
   }
