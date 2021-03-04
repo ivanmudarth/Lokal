@@ -48,6 +48,19 @@ class BizHome extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        BigButton(text: "Settings", img: "settings"),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        BigButton(text: "Edit Profile", img: "edit"),
+                      ],
+                    )
                   ],
                 ),
               ),
@@ -74,5 +87,37 @@ class BizHome extends StatelessWidget {
           textColor: Color(0xff96BE4B),
           child: Text(text, style: TextStyle(fontSize: 17)),
         ));
+  }
+
+  // ignore: non_constant_identifier_names
+  Widget BigButton({String text, String img}) {
+    return Column(
+      children: [
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: SizedBox(
+            height: 75,
+            width: 75,
+            child: RaisedButton(
+              child: Image.asset('assets/images/$img.png'),
+              shape: StadiumBorder(),
+              color: Colors.white,
+              onPressed: () {},
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        RichText(
+          text: TextSpan(
+              text: text,
+              style: TextStyle(
+                fontSize: 25,
+                color: Color(0xff868686),
+              )),
+        ),
+      ],
+    );
   }
 }
