@@ -4,14 +4,59 @@ class BizHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffECFEFF),
-      body: getBody(),
+      backgroundColor: Color(0xffE5E5E5),
+      body: getBody(context),
     );
   }
 
-  Widget getBody() {
+  Widget getBody(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return ListView(
-      children: [Column()],
+      children: [
+        Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            SizedBox(
+              height: 600,
+              width: size.width,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Color(0xffFFFFFF),
+                    border: Border.all(color: Colors.grey, width: 3),
+                    borderRadius:
+                        BorderRadius.all(Radius.elliptical(300, 100))),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 75,
+                    ),
+                    Container(
+                      width: 300,
+                      height: 300,
+                      child:
+                          Image(image: AssetImage("assets/images/bizlogo.png")),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        text: "Mangi's Italiano",
+                        style: TextStyle(
+                            fontSize: 36,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 70),
+            SizedBox(height: 40),
+          ],
+        )
+      ],
     );
   }
 
