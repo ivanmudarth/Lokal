@@ -106,7 +106,7 @@ class _BizHomeState extends State<BizHome> {
                 child: Column(children: [
               CarouselSlider(
                 options: CarouselOptions(
-                  height: 60,
+                  height: 50,
                   onPageChanged: (index, reason) {
                     setState(() {
                       _current = index;
@@ -140,14 +140,24 @@ class _BizHomeState extends State<BizHome> {
                           color: _current == index
                               ? Color.fromRGBO(0, 0, 0, 0.9)
                               : Color.fromRGBO(0, 0, 0, 0.4)),
-                      child: SizedBox(
-                        width: 50,
-                      ),
                     );
                   },
                 ).toList(),
               )
-            ]))
+            ])),
+            ButtonTheme(
+              height: 40,
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Color(0xffAFD755))),
+                onPressed: () {},
+                elevation: 5,
+                color: Color(0xffAFD755),
+                textColor: Colors.white,
+                child: Text(" My Lokal+ ", style: TextStyle(fontSize: 17)),
+              ),
+            ),
           ],
         )
       ],
