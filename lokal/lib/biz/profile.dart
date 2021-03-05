@@ -97,7 +97,7 @@ class Profile extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 30,
             ),
             EditInfo()
           ],
@@ -115,36 +115,33 @@ class Profile extends StatelessWidget {
             hinttext: "A short description about your company",
             type: true),
         InfoBox(
-            title: "About Us",
-            hinttext: "A short description about your company",
+            title: "Your Genre",
+            hinttext: "What is are the sub-genres that your company service to",
             type: true),
         InfoBox(
-            title: "About Us",
-            hinttext: "A short description about your company",
+            title: "Price Range",
+            hinttext: "Choose a price range",
+            type: false),
+        InfoBox(title: "Address", hinttext: "Add address", type: false),
+        InfoBox(
+            title: "Services Offered during COVID-19?",
+            hinttext: "Choose from the provided options",
             type: false),
         InfoBox(
-            title: "About Us",
-            hinttext: "A short description about your company",
+            title: "Attach Menu Options",
+            hinttext: "Choose from the provided options",
             type: false),
         InfoBox(
-            title: "About Us",
-            hinttext: "A short description about your company",
+            title: "Attach Any Promotions",
+            hinttext: "Choose from the provided options",
             type: false),
         InfoBox(
-            title: "About Us",
-            hinttext: "A short description about your company",
+            title: "Add Any Additional Links Here",
+            hinttext: "Choose from the provided options",
             type: false),
         InfoBox(
-            title: "About Us",
-            hinttext: "A short description about your company",
-            type: false),
-        InfoBox(
-            title: "About Us",
-            hinttext: "A short description about your company",
-            type: false),
-        InfoBox(
-            title: "About Us",
-            hinttext: "A short description about your company",
+            title: "Add Anything Else",
+            hinttext: "Choose from the provided options",
             type: false),
       ],
     );
@@ -153,14 +150,41 @@ class Profile extends StatelessWidget {
   // ignore: non_constant_identifier_names
   Widget InfoBox({String title, String hinttext, bool type}) {
     // if textbox
-    if (type) {
-      return Column(
-        children: [],
+    // remove second options after
+    if (type || !type) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            RichText(
+              text: TextSpan(
+                text: title,
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            TextField(
+                cursorColor: Colors.black,
+                decoration: InputDecoration(
+                  hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                  hintText: hinttext,
+                )),
+            SizedBox(
+              height: 20,
+            )
+          ],
+        ),
       );
     }
     // if select box
     return Column(
-      children: [],
+      children: [
+        // todo, if u have time
+      ],
     );
   }
 }
