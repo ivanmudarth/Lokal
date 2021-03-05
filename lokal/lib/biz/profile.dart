@@ -22,14 +22,19 @@ class Profile extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Row(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/back.png'),
-                          fit: BoxFit.contain),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(13.0),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: SizedBox(
+                      height: 40,
+                      width: 40,
+                      child: RaisedButton(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Image.asset('assets/images/back.png'),
+                        shape: StadiumBorder(),
+                        color: Colors.white,
+                        onPressed: () {},
+                        elevation: 0,
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -45,7 +50,7 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 125,
+                    width: 120,
                   ),
                   ButtonTheme(
                       height: 40,
