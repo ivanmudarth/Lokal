@@ -14,8 +14,8 @@ class _BizHomeState extends State<BizHome> {
   var _current = 0;
   var list = [
     'Add in promotions, menus and flyers',
-    'add text 1',
-    'add text 2'
+    'Simplified recommendations',
+    'Detailed promotional analytics'
   ];
   Widget build(BuildContext context) {
     return Scaffold(
@@ -150,20 +150,8 @@ class _BizHomeState extends State<BizHome> {
                     SizedBox(
                       height: 30,
                     ),
-                    ButtonTheme(
-                      height: 40,
-                      child: RaisedButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
-                            side: BorderSide(color: Color(0xffAFD755))),
-                        onPressed: () {},
-                        elevation: 5,
-                        color: Color(0xffAFD755),
-                        textColor: Colors.white,
-                        child:
-                            Text(" My Lokal+ ", style: TextStyle(fontSize: 17)),
-                      ),
-                    ),
+
+                    _confirmButton(text: "My Lokal+")
                   ],
                 ),
               ),
@@ -171,6 +159,35 @@ class _BizHomeState extends State<BizHome> {
           ], // end here
         )
       ],
+    );
+  }
+
+  Widget _confirmButton({String text}) {
+    return Container(
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Color(0xffAFD755), Color(0xff96BE4B)],
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(175, 215, 85, 0.25),
+            spreadRadius: 4,
+            blurRadius: 20,
+            // offset: Offset(0, 4), // changes position of shadow
+          ),
+        ],
+      ),
+      child: FlatButton(
+        splashColor: Color(0xffAFD755),
+        child: new Text(
+          text,
+          style: TextStyle(color: Colors.white, fontSize: 20),
+        ),
+        onPressed: () {},
+      ),
     );
   }
 

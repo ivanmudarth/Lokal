@@ -136,7 +136,63 @@ class _ProfileState extends State<Profile> {
   // ignore: non_constant_identifier_names
   Widget Preview() {
     return Column(
-      children: [],
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          alignment: Alignment.center,
+          width: 400,
+          height: 300,
+          child: Image(image: AssetImage("assets/images/bizlogo.png")),
+        ),
+        RichText(
+          text: TextSpan(
+            text: "Kid to Kid",
+            style: TextStyle(
+                fontSize: 36,
+                color: Colors.black,
+                fontFamily: "SF Pro Display",
+                fontWeight: FontWeight.bold),
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        RichText(
+          text: TextSpan(
+              text: '20 Queen Street N, Open 8am - 8pm',
+              style: TextStyle(
+                fontSize: 16,
+                fontFamily: "SF Pro Display",
+                color: Colors.black,
+                fontWeight: FontWeight.normal,
+                // fontWeight: FontWeight.w700,
+                //color: Color(0xff96BE4B)),
+              )),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+          child: Container(
+            height: 2.0,
+            width: 330.0,
+            color: Colors.black,
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 10),
+          child: RichText(
+            text: TextSpan(
+                text: 'Thrift shop for kids.',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: "SF Pro Display",
+                  color: Colors.black,
+                  fontWeight: FontWeight.normal,
+                  // fontWeight: FontWeight.w700,
+                  //color: Color(0xff96BE4B)),
+                )),
+          ),
+        ),
+      ],
     );
   }
 
