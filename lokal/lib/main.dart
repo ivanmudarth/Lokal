@@ -7,6 +7,7 @@ import './search.dart';
 import './biz/home.dart';
 // ignore: unused_import
 import './biz/profile.dart';
+import './biz/metrics.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +22,6 @@ class MyApp extends StatelessWidget {
         //home: HomePage(), // uncomment to display page
         //home: SearchPage(), // uncomment to display page
         // home: BizHome(), // uncomment to display page
-        home: Profile());
+        home: Metrics());
   }
 }
