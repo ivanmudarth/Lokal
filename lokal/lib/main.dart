@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: ""),
       //home: HomePage(), // uncomment to display page
       //home: SearchPage(), // uncomment to display page
-      home: BizHome(),
-      //home: Profile(),
+      //home: BizHome(),
+      home: Metrics(),
     ); // uncomment to display page
     // home: Metrics());
   }
