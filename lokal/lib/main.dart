@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
-import './home.dart';
-// ignore: unused_import
-import './search.dart';
-// ignore: unused_import
 import './biz/home.dart';
 // ignore: unused_import
 import './biz/profile.dart';

@@ -99,6 +99,22 @@ class Metrics extends StatelessWidget {
                     ))
               ],
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: 550,
+              height: 440,
+              child: Image(image: AssetImage("assets/images/metrics.png")),
+            ),
+            Container(
+              width: 550,
+              height: 300,
+              child: Image(image: AssetImage("assets/images/reviews.png")),
+            ),
+            SizedBox(
+              height: 20,
+            ),
           ],
         )
       ],
