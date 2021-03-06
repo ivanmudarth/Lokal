@@ -5,11 +5,11 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: getBody(),
+      body: getBody(context),
     );
   }
 
-  Widget getBody() {
+  Widget getBody(BuildContext context) {
     return ListView(
       children: [
         Column(
@@ -32,7 +32,9 @@ class Profile extends StatelessWidget {
                         child: Image.asset('assets/images/back.png'),
                         shape: StadiumBorder(),
                         color: Colors.white,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
                         elevation: 0,
                       ),
                     ),

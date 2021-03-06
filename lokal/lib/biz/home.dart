@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:lokal/biz/profile.dart';
+import './profile.dart';
+import './metrics.dart';
 
 // ignore: must_be_immutable
 class BizHome extends StatefulWidget {
@@ -53,7 +56,7 @@ class _BizHomeState extends State<BizHome> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                BigButton(text: "Settings", img: "settings"),
+                BigButton(text: "View Metrics", img: "settings"),
                 SizedBox(
                   width: 20,
                 ),
@@ -200,7 +203,19 @@ class _BizHomeState extends State<BizHome> {
               child: Image.asset('assets/images/$img.png'),
               shape: StadiumBorder(),
               color: Colors.white,
-              onPressed: () {},
+              onPressed: () {
+                if (img == "edit") {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Profile()),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Metrics()),
+                  );
+                }
+              },
             ),
           ),
         ),
