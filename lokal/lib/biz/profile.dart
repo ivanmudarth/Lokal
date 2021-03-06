@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
+  @override
+  _ProfileState createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+  bool edit = true;
+  bool preview = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,10 +90,15 @@ class Profile extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           //borderRadius: BorderRadius.,
                           side: BorderSide(color: Colors.white)),
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          edit = true;
+                          preview = false;
+                        });
+                      },
                       elevation: 5,
                       color: Colors.white,
-                      textColor: Color(0xff96BE4B),
+                      textColor: edit ? Color(0xff96BE4B) : Colors.grey,
                       child: Text("EDIT", style: TextStyle(fontSize: 17)),
                     )),
                 ButtonTheme(
@@ -95,10 +108,15 @@ class Profile extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           //borderRadius: BorderRadius.,
                           side: BorderSide(color: Colors.white)),
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          edit = false;
+                          preview = true;
+                        });
+                      },
                       elevation: 5,
                       color: Colors.white,
-                      textColor: Colors.grey,
+                      textColor: preview ? Color(0xff96BE4B) : Colors.grey,
                       child: Text("PREVIEW", style: TextStyle(fontSize: 17)),
                     ))
               ],
@@ -106,10 +124,19 @@ class Profile extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            EditInfo()
+            Column(
+              children: [if (edit) EditInfo() else Preview()],
+            )
           ],
         )
       ],
+    );
+  }
+
+  // ignore: non_constant_identifier_names
+  Widget Preview() {
+    return Column(
+      children: [],
     );
   }
 
