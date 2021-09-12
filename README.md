@@ -27,16 +27,28 @@ Lokal aims to facilitate that connection between consumer and retailer, with a m
 See the [business plan](https://docs.google.com/document/d/13vt3c9TlZ5PJ90tMJDdWALq43StjfD0Goq5oDT-WR8Q/edit?usp=sharing) for more details (created by Catherine Zhang, Eric Xu, Ivan Mudarth, Oren Leung, Shajan Kamalanathan, and Stephanie Xiang).
 
 ## Demo
+Consumer-facing app:
+
+<img src="https://user-images.githubusercontent.com/33183884/132976802-1ce0db77-ba26-4a27-a2dd-40c94b74e338.gif" width="300" height="600">
+
+</br>
+
+Business-facing app:
+
+<img src="https://user-images.githubusercontent.com/33183884/132974421-a2c6e3f7-0663-477c-af0a-dc271db69bbb.gif" width="300" height="600">
 
 ## Features
 
+* Multi-platform (IOS & Android)
+* User Authentication with Firebase Auth 
 
 ## Technologies
 
 * Dart
 * Flutter
 * Typescript
-* Firebase
+* Firebase / Firebase Auth![Uploading ezgif.com-gif-maker.gif…]()
+
 * Figma
 
 Note: this repo only contains code for the frontend.
