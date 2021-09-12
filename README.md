@@ -18,7 +18,8 @@
 ***
 
 ## Description
-![Screen Shot 2021-09-12 at 12 46 07 AM](https://user-images.githubusercontent.com/33183884/132972588-0d87a242-dc0d-4692-99d7-d522602bb555.png)
+
+<a><img src="https://user-images.githubusercontent.com/33183884/132972588-0d87a242-dc0d-4692-99d7-d522602bb555.png" width=700></a>
 
 Though many people express a desire to shop more in their communities, they often run into difficulties in finding a local retailer that matches both their price range and needs. 
 
