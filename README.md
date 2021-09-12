@@ -9,7 +9,7 @@
     Platform to facilitate business between local retailers and consumers.
   </p>
   <p align="center">
-    🏅 Top Tech and Finalist Award At Tech Under 20.
+  <strong> Top Tech and Finalist Award At Tech Under 20. </strong>
   </p>
 </p>
 
