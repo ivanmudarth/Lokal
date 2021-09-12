@@ -1,8 +1,24 @@
-# Lokal
+<p align="center">
+  <a href="https://github.com/ivanmudarth/Lokal">
+    <img src="https://user-images.githubusercontent.com/33183884/132973385-2b32757f-a6b4-44f6-820b-f52e1a6d7280.png" alt="Logo" width="100" height="100">
+  </a>
+  
+  <h1 align="center">Lokal</h1>
+  
+  <p align="center">
+    Platform to facilitate business between local retailers and consumers.
+  </p>
+  <p align="center">
+    🏅 Top Tech and Finalist Award At Tech Under 20.
+  </p>
+</p>
 
-Platform to facilitate business between local retailers and consumers.
+</br>
+
+***
 
 ## Description
+![Screen Shot 2021-09-12 at 12 46 07 AM](https://user-images.githubusercontent.com/33183884/132972588-0d87a242-dc0d-4692-99d7-d522602bb555.png)
 
 Though many people express a desire to shop more in their communities, they often run into difficulties in finding a local retailer that matches both their price range and needs. 
 
@@ -25,7 +41,7 @@ See the [business plan](https://docs.google.com/document/d/13vt3c9TlZ5PJ90tMJDdW
 
 Note: this repo only contains code for the frontend.
 
-### Executing program
+## Executing program
 
 * How to run the program
 * Step-by-step bullets
